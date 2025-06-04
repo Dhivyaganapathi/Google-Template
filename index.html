@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Google</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <style>
+    body {
+      background-image: url("Media/Bird.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 100vh;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+    #top {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      justify-content: flex-end;
+      margin: 6px;
+      padding: 3px;
+    }
+    #top div {
+      margin: 10px;
+    }
+    #top div a {
+      color: white;
+      text-decoration: none;
+      font-family: sans-serif;
+      font-size: 13px;
+    }
+    #top div a:hover{
+        text-decoration: underline;
+    }
+    #top div i {
+      font-size: 20px;
+      color: white;
+    }
+    #middle {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+      max-width: 1200px; /* Increased max-width */
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    #middle h1 {
+      font-size: 80px;
+      font-family: sans-serif;
+      color: white;
+      margin-bottom: 25px;
+    }
+    .search-bar {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      max-width: 1000px; /* Increased max-width */
+      margin-bottom: 20px;
+    }
+    .search-bar i {
+      background-color: white;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    .search-bar input {
+      flex: 1;
+      min-width: 200px;
+      max-width: 600px;
+      min-height: 25px;
+      padding: 10px;
+      border: none;
+      font-size: 14px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      outline: none;
+    }
+    .search-bar input:focus {
+      outline: none;
+    }
+    /* Rounded corners on the icons */
+    #search {
+      border-top-left-radius: 32px;
+      border-bottom-left-radius: 30px;
+      padding-left: 20px;
+      padding-right: 0px;
+    }
+    #camera {
+      border-top-right-radius: 32px;
+      border-bottom-right-radius: 30px;
+      padding-right: 20px;
+      cursor: pointer;
+    }
+    .shortcut {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 0px;
+      cursor: pointer;
+    }
+    .add-button p {
+      margin-top: 10px;
+      font-size: 12px;
+      font-family: sans-serif;
+      color: white;
+    }
+    #bottom {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      color: white;
+      font-family: sans-serif;
+      font-size: 13px;
+      padding-bottom: 30px;
+      text-decoration: underline;
+    }
+    #bottom a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 900px) {
+      #middle h1 {
+        font-size: 50px;
+      }
+      .search-bar {
+        max-width: 100%;
+        margin: 0 10px 20px 10px;
+      }
+      .search-bar input {
+        max-width: 100%;
+        font-size: 14px;
+      }
+      #middle {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 500px) {
+      #middle h1 {
+        font-size: 35px;
+      }
+      .search-bar input {
+        min-width: 150px;
+        font-size: 12px;
+      }
+      .search-bar i {
+        padding: 8px;
+      }
+      .shortcut {
+        height: 40px;
+        width: 40px;
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="top">
+    <div><a href="#">Gmail</a></div>
+    <div><a href="#">Images</a></div>
+    <div><i class="fa-solid fa-flask"></i></div>
+    <div><i class="fa-solid fa-bars"></i></div>
+    <div><i class="fa-solid fa-user"></i></div>
+  </div>
+
+  <div id="middle">
+    <div><h1>Google</h1></div>
+    <div class="search-bar">
+      <i class="fa-solid fa-magnifying-glass" id="search"></i>
+      <input type="text" placeholder="Search Google or type a URL" />
+      <i class="fa-solid fa-microphone" id="mic"></i>
+      <i class="fa-solid fa-camera" id="camera"></i>
+    </div>
+    <div class="shortcut">+</div>
+    <div class="add-button"><p>Add Shortcut</p></div>
+  </div>
+
+  <div id="bottom">
+    <div style="padding-left: 20px;"><a href="#"><i class="fa-solid fa-link"></i> Photo by Andrey Popov</a></div>
+    <div style="padding-right: 20px;"><i class="fa-solid fa-pencil pencil"></i></div>
+  </div>
+</body>
+</html>
